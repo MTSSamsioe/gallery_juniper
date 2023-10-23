@@ -1,0 +1,116 @@
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.original-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    
+}
+
+/* All buttons and info sections */
+
+.all-btn {
+    height: 15%;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 100;
+
+    /*background-color: red;*/
+    
+}
+
+.all-info {
+    background-color: bisque;
+    color: black;
+    font-family: sans-serif;
+    font-size: small;
+    border: 2px solid black;
+    border-radius: 15%;
+    z-index: 0;
+    opacity: 0;
+    transition: 1s;
+    z-index: 900;
+}
+
+.all-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+
+/* 1 first number */
+
+.first-btn {
+    position: absolute;
+    top: 85%;
+    left: 20%;
+    transform: translate(-100%, -100%);
+    -ms-transform: translate(-100%, -100%);
+
+}
+
+.first-info {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top:61%;
+    left: 83%;
+    transform: translate(-100%, -100%);
+    -ms-transform: translate(-100%, -100%);
+    
+}
+
+.first-btn:hover ~ .first-img  {
+    z-index: 2;
+    opacity: 1;
+}
+
+.first-btn:hover ~ .first-info {
+    z-index: 2;
+    opacity: 1;
+}
+
+
+
+
+/* 2 second number */
+
+.second-btn {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-100%, -100%);
+    -ms-transform: translate(-100%, -100%);
+
+}
+
+.second-info {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top:61%;
+    left: 83%;
+    transform: translate(-100%, -100%);
+    -ms-transform: translate(-100%, -100%);
+    
+}
+
+.second-btn:hover ~ .second-img  {
+    z-index: 2;
+    opacity: 1;
+}
+
+.second-btn:hover ~ .second-info {
+    z-index: 2;
+    opacity: 1;
+}
