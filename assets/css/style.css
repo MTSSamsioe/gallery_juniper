@@ -21,21 +21,24 @@
     border-radius: 50%;
     z-index: 100;
 
-    /*background-color: red;*/
+    animation: pulse 1.2s ease infinite;
+    
+    background-color: whitesmoke;
+    opacity: 0.5;
     
 }
 
 .all-info {
-    background-color: bisque;
+    background-color: whitesmoke;
     color: black;
     font-family: sans-serif;
     font-size: small;
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     border-radius: 15%;
     z-index: 0;
-    opacity: 0;
-    transition: 1s;
-    z-index: 900;
+    /* opacity: 0; */
+    /* transition: 1s; */
+    
 }
 
 .all-img {
@@ -43,54 +46,75 @@
     width: 100%;
     height: auto;
     z-index: 0;
-    opacity: 0;
-    transition: 1s;
+    /* opacity: 0;
+    transition: 1s; */
 }
 
 
-/* 1 first number */
+/* 1 first number ---------------------------------------------- */
 
 .first-btn {
     position: absolute;
-    top: 85%;
-    left: 20%;
-    transform: translate(-100%, -100%);
-    -ms-transform: translate(-100%, -100%);
-
+    top: 73%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    
 }
 
 .first-info {
     width: 20%;
     height: auto;
     position: absolute;
-    top:61%;
-    left: 83%;
-    transform: translate(-100%, -100%);
-    -ms-transform: translate(-100%, -100%);
+    top:69%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 1%;
+    
+}
+
+.all-btn:hover {
+    
+    animation-play-state: paused;
     
 }
 
 .first-btn:hover ~ .first-img  {
     z-index: 2;
-    opacity: 1;
+    
 }
 
 .first-btn:hover ~ .first-info {
-    z-index: 2;
-    opacity: 1;
+    z-index: 3;
+    
+}
+
+ 
+.first-pointer {
+    position: absolute;
+    top: 45%;
+	left: -10%;
+	transform: rotate(60deg);
+    width: 0;
+	height: 0;
+    border-left: 2vh solid transparent;
+	border-right: 2vh solid transparent;
+	border-top: 10vh solid whitesmoke;
+    z-index: -1;
+
+    
 }
 
 
-
-
-/* 2 second number */
+/* 2 second number ------------------------------------------------------ */
 
 .second-btn {
     position: absolute;
     top: 20%;
     left: 30%;
-    transform: translate(-100%, -100%);
-    -ms-transform: translate(-100%, -100%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 
 }
 
@@ -100,17 +124,32 @@
     position: absolute;
     top:61%;
     left: 83%;
-    transform: translate(-100%, -100%);
-    -ms-transform: translate(-100%, -100%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     
 }
 
 .second-btn:hover ~ .second-img  {
     z-index: 2;
-    opacity: 1;
+    
 }
 
 .second-btn:hover ~ .second-info {
     z-index: 2;
-    opacity: 1;
+    
 }
+
+
+
+@keyframes pulse {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
