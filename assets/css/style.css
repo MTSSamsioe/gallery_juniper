@@ -20,11 +20,11 @@
     cursor: pointer;
     border-radius: 50%;
     z-index: 100;
-
+    
     animation: pulse 1.2s ease infinite;
     
     background-color: whitesmoke;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     
 }
 
@@ -53,7 +53,7 @@
 
 /* 1 first number ---------------------------------------------- */
 
-.first-btn {
+#first-btn {
     position: absolute;
     top: 73%;
     left: 10%;
@@ -74,7 +74,13 @@
     
 }
 
-.all-btn:hover {
+/* .all-btn:hover {
+    
+    animation-play-state: paused;
+    
+}
+
+.all-btn:hover ~ .all-btn {
     
     animation-play-state: paused;
     
@@ -89,8 +95,8 @@
     z-index: 3;
     
 }
+*/
 
- 
 .first-pointer {
     position: absolute;
     top: 45%;
@@ -102,7 +108,7 @@
 	border-right: 2vh solid transparent;
 	border-top: 10vh solid whitesmoke;
     z-index: -1;
-
+    
     
 }
 
@@ -115,7 +121,7 @@
     left: 30%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-
+    
 }
 
 .second-info {
@@ -143,13 +149,19 @@
 
 @keyframes pulse {
     0% {
-      transform: scale(1, 1);
+        transform: scale(1, 1);
     }
     50% {
-      opacity: 0.3;
+        opacity: 0.3;
     }
     100% {
-      transform: scale(1.5);
-      opacity: 0;
+        transform: scale(1.5);
+        opacity: 0;
     }
-  }
+
+}
+/* Testing  */
+.hidden {
+   opacity: 0;
+   animation-play-state: paused;
+}
