@@ -4,7 +4,7 @@ const button1 = document.getElementById("first-btn")
 
 /* let id_test = buttons[0].getAttribute('id') */
 
-console.log(id_test)
+console.log(buttons)
 
 buttons.forEach(button => {
     button.addEventListener('click', event => {
